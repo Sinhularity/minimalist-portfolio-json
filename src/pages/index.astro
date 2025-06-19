@@ -1,11 +1,62 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import background from "../assets/background.svg";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+
+import About from "../components/sections/About.astro";
+import Hero from "../components/sections/Hero.astro";
+import Projects from "../components/sections/Projects.astro";
+import Skills from "../components/sections/Skills.astro";
+import Education from "@/components/sections/Education.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout tittle="Portfolio">
+  <div class="layout-wrapper">
+    <img id="background" src={background.src} alt="" fetchpriority="high" />
+    <main>
+      <h1>Welcome to my portfolio</h1>
+      <p>If you have any questions, feel free to reach out!</p>
+    </main>
+    <Hero />
+    <About />
+    <Education />
+    <Projects />
+    <Skills />
+    <footer>
+      <p>This project is licensed under the MIT License.</p>
+    </footer>
+  </div>
 </Layout>
+
+<style>
+  #Portfolio {
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    gap: 2rem;
+  }
+  #background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  main {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+  }
+  footer {
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+</style>

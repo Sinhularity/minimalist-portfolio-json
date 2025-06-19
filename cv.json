@@ -1,0 +1,135 @@
+{
+  "basics": {
+    "name": "Kevin Sebastián Frias García",
+    "label": "Motivated student with a strong interest in backend development.",
+    "image": "",
+    "email": "zs22017021@estudiantes.uv.mx",
+    "phone": "(52+) 921-265-2693",
+    "url": "",
+    "summary": "Software engineering student passionate about web technologies, and building socially impactful digital solutions. Experienced with Flutter, Firebase and Spring Boot, and committed to sustainable coding practices.",
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Kevin Sebastián Frias García",
+        "url": "https://www.linkedin.com/in/keffwontwakeup"
+      },
+      {
+        "network": "GitHub",
+        "username": "Sinhularity",
+        "url": "https://github.com/Sinhularity"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Universidad Veracruzana",
+      "url": "https://www.uv.mx/coatza/",
+      "area": "Software Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2022-02-01",
+      "endDate": "2026-07-01"
+    }
+  ],
+  "awards": [
+    {
+      "title": "18th Regional Knowledge Marathon – ANFECA Zone 6 (XVIII Maratón Regional de Conocimientos ANFECA Zona 6)",
+      "date": "2025-05-09",
+      "awarder": "ANFECA"
+    },
+    {
+      "title": "Laudatory note",
+      "date": "2025-04-29",
+      "awarder": "Universidad Veracruzana",
+      "summary": "Recognition for outstanding academic performance."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Javascript Essentials",
+      "date": "2024-01-30",
+      "issuer": "CISCO Networking Academy",
+      "url": "https://www.credly.com/badges/fcd432bd-6637-4f65-b6a8-431087e9dfb1/public_url"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Backend Development",
+      "level": "Intermediate",
+      "keywords": ["Firebase", "Express", "Spring Boot"]
+    },
+    {
+      "name": "Database Management",
+      "level": "Intermediate",
+      "keywords": ["MySQL", "PostgreSQL", "MongoDB"]
+    },
+    {
+      "name": "Version Control",
+      "level": "Intermediate",
+      "keywords": ["Git", "GitHub"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "B1"
+    },
+    {
+      "language": "French",
+      "fluency": "A1"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Programming & Software Development",
+      "keywords": ["Python", "JavaScript", "PHP", "Sustainable Code"]
+    },
+    {
+      "name": "Web Frameworks",
+      "keywords": ["Django", "Laravel", "RESTful APIs"]
+    },
+    {
+      "name": "Backend Development",
+      "keywords": ["Server-side Logic", "Database Integration"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AcopiaTech",
+      "startDate": "2025-03-24",
+      "endDate": "2025-05-18",
+      "description": "A project to allow users to donate their unused technology.",
+      "highlights": [
+        "Won third place in the 19th Regional Entrepreneurial Expo organized by ANFECA (XIX Expo Emprendedora ANFECA Regionales)"
+      ],
+      "url": "https://github.com/Sinhularity/acopiatech-app"
+    },
+    {
+      "name": "Reservia",
+      "startDate": "2024-05-12",
+      "endDate": "2024-05-23",
+      "description": "A project to manage medical appointments.",
+      "highlights": ["Final project for the course"],
+      "url": "https://github.com/Sinhularity/Reservia"
+    },
+    {
+      "name": "Patitas al Rescate",
+      "startDate": "2025-05-01",
+      "endDate": "2025-06-04",
+      "description": "Developed an API to support the rescue of stray animals.",
+      "highlights": ["Final project for the course"],
+      "url": "https://github.com/Sinhularity/PatitasAlRescate"
+    },
+    {
+      "name": "Copsboot",
+      "startDate": "2025-04-18",
+      "endDate": "2025-04-26",
+      "description": "A small API in Spring boot framework.",
+      "highlights": ["Spring Boot project"],
+      "url": "https://github.com/Sinhularity/Copsboot"
+    }
+  ]
+}

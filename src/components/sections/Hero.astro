@@ -1,0 +1,128 @@
+---
+import Section from "./Section.astro";
+
+import Mail from "@/assets/icons/Mail.astro";
+import Phone from "@/assets/icons/Phone.astro";
+
+import LinkedIn from "@/assets/icons/LinkedIn.astro";
+import GitHub from "@/assets/icons/GitHub.astro";
+import type { SocialIcon } from "../types.d.ts";
+
+import { basics } from "@/cv";
+const { name, label, image, profiles, phone, email, summary } = basics;
+
+const SOCIAL_ICONS: SocialIcon = {
+  LinkedIn,
+  GitHub,
+};
+
+const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
+const linkedUrl = linkedInfo?.url;
+
+const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
+---
+
+<Section>
+  <div class="container" style="container">
+    <div class="hero-content">
+      <h1>{name}</h1>
+      <h2>{label}</h2>
+      <footer class="no-print">
+        {
+          email && (
+            <a
+              href={`mailto:${email}`}
+              title={`Send email to ${name} at ${email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Mail />
+            </a>
+          )
+        }
+        {
+          phone && (
+            <a
+              href={`tel:${phone}`}
+              title={`Call ${name} at ${phone}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Phone />
+            </a>
+          )
+        }
+        {
+          profiles.map(({ network, url, username }) => {
+            const Icon = SOCIAL_ICONS[network];
+            return (
+              <a
+                href={url}
+                title={`Visit profile ${name} on ${network}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon />
+              </a>
+            );
+          })
+        }
+      </footer>
+    </div>
+  </div>
+</Section>
+
+<style>
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-right: 32px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444;
+    text-wrap-mode: balance;
+  }
+
+  img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 128px;
+    border-radius: 16px;
+  }
+  span {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.85rem;
+    letter-spacing: -0.05rem;
+  }
+  footer {
+    display: flex;
+    gap: 4px;
+    font-size: 0.65rem;
+    color: #555;
+    margin-top: 8px;
+  }
+  footer a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    padding: 4px;
+    height: 32px;
+    width: 32px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  footer a:hover {
+    background: #eee;
+    border: 1px solid #ddd;
+  }
+</style>
