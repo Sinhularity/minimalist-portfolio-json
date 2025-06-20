@@ -1,6 +1,4 @@
 ---
-import background from "../assets/background.svg";
-
 import Layout from "../layouts/Layout.astro";
 
 import About from "../components/sections/About.astro";
@@ -8,35 +6,30 @@ import Hero from "../components/sections/Hero.astro";
 import Projects from "../components/sections/Projects.astro";
 import Skills from "../components/sections/Skills.astro";
 import Education from "@/components/sections/Education.astro";
+import KeyboardManager from "@/components/KeyboardManager.astro";
 ---
 
 <Layout tittle="Portfolio">
-  <div class="layout-wrapper">
-    <img id="background" src={background.src} alt="" fetchpriority="high" />
-    <main>
+  <main>
+    <div class="layout-wrapper">
       <h1>Welcome to my portfolio</h1>
       <p>If you have any questions, feel free to reach out!</p>
-    </main>
+    </div>
     <Hero />
     <About />
     <Education />
     <Projects />
     <Skills />
-    <footer>
-      <p>This project is licensed under the MIT License.</p>
-    </footer>
-  </div>
+
+  </main>
+
+  <KeyboardManager></KeyboardManager>
+  <footer>
+    <p>This project is licensed under the MIT License.</p>
+  </footer>
 </Layout>
 
 <style>
-  #Portfolio {
-    padding: 4rem;
-    margin: auto;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    gap: 2rem;
-  }
   #background {
     position: absolute;
     top: 0;
@@ -53,9 +46,13 @@ import Education from "@/components/sections/Education.astro";
   }
   footer {
     position: relative;
+    align-items: center;
+    display: flex;
+    max-width: 380px;
+    justify-items: center;
     z-index: 1;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #eeebeb;
     border-radius: 8px;
     margin-top: 2rem;
   }
